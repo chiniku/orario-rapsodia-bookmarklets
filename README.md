@@ -4,7 +4,7 @@
 </br>
 </br>
 
-## [select_card.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card.js)
+## [select_card_for_sell.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card_for_sell.js)
 「カードのまとめて売却画面」で上から20枚選択するブックマークレット
 
 ## [select_card_for_limitbreak.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card_for_limitbreak.js)
