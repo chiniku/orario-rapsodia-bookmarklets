@@ -1,9 +1,11 @@
 # orario-rapsodia-bookmarklets
 ダンラプのブックマークレット集
+</br>
+</br>
+</br>
 
 ## [select_card.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card.js)
 「カードのまとめて売却画面」で上から20枚選択するブックマークレット
-
 
 ## [limitbreak.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/limitbreak.js)
 限界突破に使用するカードの選択を行うブックマークレット
