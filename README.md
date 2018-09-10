@@ -18,7 +18,7 @@
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
 - 環境によって待ち時間の調整が必要(指定はミリ秒)
 
-## [chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/chiniku.js)
+## [use_chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/use_chiniku.js)
 血肉を使うブックマークレット 
 - ダンジョン探索中に使用可能アイテムのうち最も左側のアイテムを第1パーティに対して使う
 - アイテムが血肉かどうかの判定は行っていないので、血肉かどうかに関わらずアイテムを使おうとする
