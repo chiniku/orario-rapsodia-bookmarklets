@@ -12,7 +12,7 @@
 - 保護中・編成中のカードを除いて最大10枚を選択する
 - 「カードで限界突破」のタブのクリックも行うので、「素材で限界突破」のタブが開いている状態からでも実行可能
 
-## [maseki.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/maseki.js)
+## [sell_maseki.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/sell_maseki.js)
 魔石を売却するブックマークレット 
 - 「素材画面」を開いている状態から実行することで、持っている魔石をすべて売却する。
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
