@@ -14,7 +14,7 @@
 
 ## [sell_maseki.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/sell_maseki.js)
 魔石を売却するブックマークレット 
-- 「素材画面」を開いている状態から実行することで、持っている魔石をすべて売却する。
+- 「素材」を開いている状態から実行することで、持っている魔石をすべて売却する。
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
 - 環境によって待ち時間の調整が必要(指定はミリ秒)
 
@@ -26,3 +26,12 @@
 - 第1パーティ以外に適用したい場合は4行目のnth_partyを2や3に変更すればよい
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
 - 環境によって待ち時間の調整が必要(指定はミリ秒なので1500なら1.5秒)
+
+## [goto_sozai.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/goto_sozai.js)
+素材ページへ遷移するブックマークレット 
+
+## [goto_seisei.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/goto_seisei.js)
+アイテム生成の3ページ目(血肉)へ遷移するブックマークレット 
+
+## [goto_present.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/goto_present.js)
+プレゼントボックスへ遷移するブックマークレット 
