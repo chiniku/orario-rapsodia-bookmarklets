@@ -1,5 +1,5 @@
 # orario-rapsodia-bookmarklets
-ダンラプのブックマークレット集
+ダンラプのブックマークレット集(腱鞘炎防止用)
 </br>
 </br>
 </br>
