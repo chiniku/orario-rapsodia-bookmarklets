@@ -19,6 +19,12 @@
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
 - 環境によって待ち時間の調整が必要(指定はミリ秒)
 
+## [haken_iron.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/haken_iron.js)
+鉄鉱石が入手できる派眷先にパーティを派眷するブックマークレット
+- 1度の実行で1パーティを派眷
+- 派眷画面への遷移、派眷先の選択、メンバー自動編成、出発までを行い、再度派眷画面に戻ってくる
+- `haken_order`に設定されている派眷先を変更すれば鉄鉱石以外にも利用可能
+
 ## [use_chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/use_chiniku.js)
 血肉を使うブックマークレット 
 - ダンジョン探索中に使用可能アイテムのうち最も左側のアイテムを第1パーティに対して使う
