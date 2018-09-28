@@ -61,3 +61,8 @@
 
 ## [getall_present.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/getall_present.js)
 プレゼントボックスへ遷移しすべて受け取るブックマークレット
+
+## [create_chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/create_chiniku.js)
+アイテム生成の3ページ目に遷移して血肉を生成するブックマークレット
+- 現状は1回の処理で最大10個
+- 舌があるだけ作るように修正予定
