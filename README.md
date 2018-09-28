@@ -31,11 +31,12 @@
 ## [sell_sozai_one_by_one.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/sell_sozai_one_by_one.js)
 指定した数以上保持してある素材を売却するブックマークレット(一括売却のブックマークレットの併用を推奨)
 - 「素材」ページへの遷移を含めて処理を実施
-- 1回の実行ですべての素材をチェックしてそれぞれ売却処理を繰り返し行う
+- 1回の実行で指定したすべての素材をチェックしてそれぞれ売却処理を繰り返し行う
 - 1アイテムにつき最大2回の売却処理を行う
 - `item_max_counts`に売却したい素材名と確保しておきたい数を指定
   - `"ゴブリンの爪": 30` と書いておくと30個以上持っている場合は30個になるように売却を行う
   - 下のほうにある主な素材のリストにぶつけてidを拾ってるので名前が正しくないと処理されない
+  - `item_max_counts`に指定の無い素材は特に何もしない
 - 環境によって待ち時間の調整が必要(指定は秒)
 
 ## [haken_iron.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/haken_iron.js)
