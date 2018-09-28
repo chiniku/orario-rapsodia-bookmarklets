@@ -58,3 +58,6 @@
 
 ## [goto_present.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/goto_present.js)
 プレゼントボックスへ遷移するブックマークレット 
+
+## [getall_present.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/getall_present.js)
+プレゼントボックスへ遷移しすべて受け取るブックマークレット
