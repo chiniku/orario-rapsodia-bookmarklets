@@ -24,7 +24,7 @@
 - 「素材」ページへの遷移を含めて処理を実施
 - 一括売却機能を使って指定した素材をすべて売却する。
 - ダイアログが開くのをsleepで待ち受けてるので信頼性は低い
-- 環境によって待ち時間の調整が必要(指定はミリ秒)
+- 環境によって待ち時間の調整が必要(指定は秒)
 
 ## [sell_sozai_one_by_one.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/sell_sozai_one_by_one.js)
 指定した数以上保持してある素材を売却するブックマークレット(一括売却のブックマークレットの併用を推奨)
@@ -33,7 +33,7 @@
 - 1アイテムにつき最大2回の売却処理を行う
 - `item_max_counts`に売却したい素材名と確保しておきたい数を指定
   - `"ゴブリンの爪": 30` と書いておくと30個以上持っている場合は30個になるように売却を行う
-- 環境によって待ち時間の調整が必要(指定はミリ秒)
+- 環境によって待ち時間の調整が必要(指定は秒)
 
 ## [haken_iron.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/haken_iron.js)
 鉄鉱石が入手できる派眷先にパーティを派眷するブックマークレット
