@@ -68,4 +68,4 @@
 
 ## [create_chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/create_chiniku.js)
 アイテム生成の3ページ目に遷移して血肉を生成するブックマークレット
-- ~~現状は1回の処理で最大10個~~ 舌がある分だけ繰り返し作るように修正
+- 舌がある分だけ繰り返し血肉を作成する
