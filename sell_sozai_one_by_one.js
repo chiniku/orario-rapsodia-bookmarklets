@@ -2,18 +2,19 @@ javascript:
 (function() {
   'use strict';
   const sleep_sec = 0.5;
+  const sell_roughly = true;
 
   const item_max_counts = {
-      "コボルトの皮": 100
+      "コボルトの皮": 50
     , "ゴブリンの爪": 30
     , "ゴブリンの牙": 30
-    , "ゴブリンの角": 100
-    , "ダンジョン・リザードの鱗": 60
+    , "ゴブリンの角": 50
+    , "ダンジョン・リザードの鱗": 50
     , "ダンジョン・リザードの牙": 30
     , "フロッグシューターの皮": 50
     , "フロッグシューターの瞳": 50
     , "ウォーシャドウの瞳鏡": 50
-    , "キラーアントの牙": 100
+    , "キラーアントの牙": 50
   };
 
   main();
@@ -61,7 +62,8 @@ javascript:
   }
 
   async function sell_item_exceed_max_count([id, max_count]){
-    for (let i=0;i<2;i++) {
+    const max_repeat_count = sell_roughly ? 1 : 2;
+    for (let i=0;i<max_repeat_count;i++) {
       const target_item = item(id);
       if (!target_item){ return; }
 
