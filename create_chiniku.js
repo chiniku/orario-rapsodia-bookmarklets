@@ -39,6 +39,7 @@ javascript:
       make_chiniku();
       await wait(shop_result_opened);
       close_shop_modal();
+      await sleep(sleep_sec);
     }
   }
 
@@ -49,6 +50,7 @@ javascript:
       return true;
     }
     else {
+      console.log("returned false");
       return false;
     }
   }
