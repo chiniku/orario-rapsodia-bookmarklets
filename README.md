@@ -8,6 +8,11 @@
 ## [select_card_for_sell.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card_for_sell.js)
 「カードのまとめて売却画面」で上から20枚選択するブックマークレット
 
+## [select_R_for_sell.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_R_for_sell.js)
+「カードのまとめて売却画面」で指定したRのカードを20枚選択するブックマークレット
+- `sell_R_list`に売却したいRのカードの名前を指定する
+- 「まとめて売却」を開きブックマークレットを実行すると、`sell_R_list`に指定した順に保護・編成されてない対象Rカードを選択する
+
 ## [select_card_for_limitbreak.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card_for_limitbreak.js)
 限界突破に使用するカードを選択するブックマークレット
 - 保護中・編成中のカードを除いて最大10枚を選択する
