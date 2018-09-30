@@ -12,6 +12,7 @@
 「カードのまとめて売却画面」で指定したRのカードを20枚選択するブックマークレット
 - `sell_R_list`に売却したいRのカードの名前を指定する
 - 「まとめて売却」を開きブックマークレットを実行すると、`sell_R_list`に指定した順に保護・編成されてない対象Rカードを選択する
+- 限界突破していても保護しておらず、編成もされてないカードは選択されるので注意が必要
 
 ## [select_card_for_limitbreak.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/select_card_for_limitbreak.js)
 限界突破に使用するカードを選択するブックマークレット
