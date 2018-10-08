@@ -124,3 +124,10 @@
 ## [tansaku_skip.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/tansaku_skip.js)
 オラリオ探索の「出会う」ボタンをクリック後、シナリオ再生をスキップするブックマークレット
 
+## [next_page.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/next_page.js)
+ページングされたダイアログで現在のページの次のページを表示するブックマークレット
+
+## [previous_page.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/previous_page.js)
+ページングされたダイアログで現在のページの一つ前のページを表示するブックマークレット
+
+
