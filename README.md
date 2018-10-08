@@ -108,6 +108,13 @@
 - 覚醒以外の画面が開いている場合は、覚醒への遷移のみ行う
 - 覚醒画面が開いている場合は、選択されているカードの覚醒を行う
 
+## [report_quest.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/report_quest.js)
+クエスト報告を行うブックマークレット
+- クエストへの遷移からクエスト報告までの処理を行う
+- 報告できるクエストをすべて報告する
+- クエスト報告を行うことで新たに報告できるクエストが発生するような場合は、繰り返し最大5回まで報告処理を行う
+- イベントクエストにも対応
+
 ## [tansaku_auto.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/tansaku_auto.js)
 オラリオ探索の「出会う」ボタンをクリック後、シナリオ再生をAUTOモードにするブックマークレット
 - 一番上に表示されているシナリオが対象（1回の実行で1シナリオ)
