@@ -103,6 +103,11 @@
 - 下位装備の自動生成は行わないので不足している場合は別途生成が必要
 - イベント装備には未対応
 
+## [kakusei.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/kakusei.js)
+覚醒を行うブックマークレット
+- 覚醒以外の画面が開いている場合は、覚醒への遷移のみ行う
+- 覚醒画面が開いている場合は、選択されているカードの覚醒を行う
+
 ## [tansaku_auto.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/tansaku_auto.js)
 オラリオ探索の「出会う」ボタンをクリック後、シナリオ再生をAUTOモードにするブックマークレット
 - 一番上に表示されているシナリオが対象（1回の実行で1シナリオ)
