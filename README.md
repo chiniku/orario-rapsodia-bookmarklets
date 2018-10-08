@@ -80,3 +80,17 @@
 ## [create_chiniku.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/create_chiniku.js)
 アイテム生成の3ページ目に遷移して血肉を生成するブックマークレット
 - 舌がある分だけ繰り返し血肉を作成する
+
+## [create_weapon.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/create_weapon.js)
+指定した装備を生成するブックマークレット
+- 装備生成への遷移、素材となる下位装備の選択、装備の生成を行う
+- `weapon_type`と`weapon_name`に装備の種類と名前を指定する（※1ブックマークレット1装備)
+    - 例)
+    ```
+    const weapon_type = "片手剣";
+    const weapon_name = "シルバーソード";
+    ```
+- 素材となる下位装備は、保護・装備されていないもののうち一番最初にあるものが選択される
+- 下位装備の自動生成は行わないので不足している場合は別途生成が必要
+- イベント装備には未対応
+
