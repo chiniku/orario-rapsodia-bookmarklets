@@ -103,3 +103,12 @@
 - 下位装備の自動生成は行わないので不足している場合は別途生成が必要
 - イベント装備には未対応
 
+## [tansaku_auto.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/tansaku_auto.js)
+オラリオ探索の「出会う」ボタンをクリック後、シナリオ再生をAUTOモードにするブックマークレット
+- 一番上に表示されているシナリオが対象（1回の実行で1シナリオ)
+- オラリオ探索画面が開いていない場合は、オラリオ探索への遷移も行う
+- オラリオ探索の結果が開いている場合はそれを閉じてから処理を行う
+
+## [tansaku_skip.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/tansaku_skip.js)
+オラリオ探索の「出会う」ボタンをクリック後、シナリオ再生をスキップするブックマークレット
+
