@@ -2,7 +2,7 @@
 
 set -u -e -o pipefail
 
-usage="Usage: create_weapon_generator <weapon_type> <weapon_name>"
+usage="Usage: ./generate_weapon_bookmarklet.sh <weapon_type> <weapon_name>"
 
 show_help() {
 cat << EOF
