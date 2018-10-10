@@ -6,9 +6,11 @@ javascript:
   main();
 
   async function main() {
-    goto_quest();
-    await sleep(sleep_sec*2);
-    await wait(quest_opened);
+    if (! quest_opened()){
+      goto_quest();
+      await sleep(sleep_sec*2);
+      await wait(quest_opened);
+    }
 
     for (let i=0;i<5;i++) {
       const result = select_quest_category();
@@ -30,8 +32,8 @@ javascript:
   }
 
   function quest_opened(){
-    const quest_panel = game_frame().querySelector('#container > div.grid_td08 > ul > li:nth-child(1) > div.selected');
-    return not_now_loading() && quest_panel && quest_panel.innerText === "デイリー";
+    const quest_panel = game_frame().querySelector('#container > div.grid_td08 > ul > li > div.selected');
+    return not_now_loading() && quest_panel;
   }
 
   function select_quest_category(){
@@ -44,9 +46,13 @@ javascript:
     };
     const quest_category = game_frame().querySelector('#container > div.grid_td08 > ul > li div.ico_common01');
     if (quest_category) {
-      const category_id = quest_category_id[quest_category.parentNode.innerText];
-      const query_string = `?action=mission_index&guid=ON&div=${category_id}`;
-      change_search_params(query_string);
+      const target_category = quest_category.parentNode.innerText;
+      const current_category = game_frame().querySelector('#container > div.grid_td08 > ul > li > div.selected').innerText;
+      if (current_category !== target_category ) {
+        const category_id = quest_category_id[target_category];
+        const query_string = `?action=mission_index&guid=ON&div=${category_id}`;
+        change_search_params(query_string);
+      }
       return true;
     }
     else {
@@ -89,28 +95,17 @@ javascript:
   }
 
   async function report_quest(){
+    const selector = '#container > div.grid_td08 > div > div.sec_common03 > section > div > a.btn_common04:not([class*="disabled"])';
     for (let i=0;i<5;i++) {
-      const result = await report_in_bulk();
-      if (!result) { break };
+      const report_button = game_frame().querySelector(selector);
+      if (!report_button) {
+        break;
+      }
+      report_button.click();
       await wait(quest_result_modal_opened);
       close_quest_result();
       await sleep(sleep_sec);
     };
-  }
-
-  async function report_in_bulk(){
-    const selector = '#container > div.grid_td08 > div > div.sec_common03 > section > div > a.btn_common04:not([class*="disabled"])';
-    const report_button = game_frame().querySelector(selector);
-    if (report_button) {
-      report_button.click();
-      await sleep(sleep_sec*2);
-      await wait(not_now_loading);
-      await sleep(sleep_sec*2);
-      return true;
-    }
-    else {
-      return false;
-    }
   }
 
   function quest_result_modal_opened(){
