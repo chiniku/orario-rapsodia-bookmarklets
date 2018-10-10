@@ -6,11 +6,9 @@ javascript:
   main();
 
   async function main() {
-    if (! quest_opened()){
-      goto_quest();
-      await sleep(sleep_sec*2);
-      await wait(quest_opened);
-    }
+    goto_quest();
+    await sleep(sleep_sec*2);
+    await wait(quest_opened);
 
     for (let i=0;i<5;i++) {
       const result = select_quest_category();
