@@ -23,7 +23,7 @@ reverse() {
     done
 }
 
-output=$(cat haken_base.js | sed '/番目の派眷先/d')
+output=$(cat haken.js | sed '/番目の派眷先/d')
 for place in $(reverse "$@"); do
     sed_command=$(printf '/const haken_order/a \    "%s",' "$place")
     output=$(echo "$output" | sed "$sed_command")
