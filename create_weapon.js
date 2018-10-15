@@ -2,6 +2,7 @@ javascript:
 (function() {
   'use strict';
   const sleep_sec = 0.5;
+  const event_weapon = false;
   const weapon_type = "種類";
   const weapon_name = "名前";
 
@@ -34,7 +35,7 @@ javascript:
   }
 
   function goto_weapon_seisei(){
-    const query_string = "?action=home_shop_index&sideDiv=3&guid=ON";
+    const query_string = event_weapon ? "?action=home_shop_index&sideDiv=3&pageDiv=3" : "?action=home_shop_index&sideDiv=3&guid=ON";
     change_search_params(query_string);
   }
 
@@ -43,8 +44,9 @@ javascript:
   }
 
   function weapon_seisei_opened(){
-    const weapon_seisei_panel  = game_frame().querySelector('#container > div.base_box_side_space01.pos_rel > ul > li:nth-child(1) > a');
-    return not_now_loading() && weapon_seisei_panel && weapon_seisei_panel.innerText === "装備生成";
+    const tab_name = event_weapon ? "イベント" : "装備生成";
+    const weapon_seisei_panel  = game_frame().querySelector('#container > div.base_box_side_space01.pos_rel > ul > li > a.selected');
+    return not_now_loading() && weapon_seisei_panel && weapon_seisei_panel.innerText === tab_name;
   }
 
   function weapon_menu_opened(type){
