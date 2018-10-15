@@ -39,15 +39,16 @@
 - 「素材」ページへの遷移を含めて処理を実施
 - 1回の実行で指定したすべての素材をチェックしてそれぞれ売却処理を繰り返し行う
 - `item_max_counts`に売却したい素材名と確保しておきたい数を指定
-  - 設定例) `"ゴブリンの爪": 30`
-  - 下のほうにある主な素材のリストにぶつけてidを拾ってるので名前が正しくないと処理されない
-  - `item_max_counts`に指定の無い素材は特に何もしない
-- `sell_roughly`の設定により売却処理の内容が変わる
-    - `true`を設定している場合、1アイテムにつき最大1回の売却を行う(defaultの動作)
-    - `false`に設定している場合、指定した数ぴったりになるように、1アイテムにつき最大2回の売却を行う
+    - 設定例) `"ゴブリンの爪": 30`
+    - 下のほうにある主な素材のリストにぶつけてidを拾ってるので名前が正しくないと処理されない
+    - `item_max_counts`に指定の無い素材は特に何もしない
+- `item_max_counts`に指定した数と`buffer_count`に指定した数の合計より多い場合に売却処理を行う
+- `sell_exactly`の設定により売却処理の内容が変わる
+    - `false`を設定している場合、1アイテムにつき最大1回の売却を行う(defaultの動作)
+    - `true`に設定している場合、指定した数ぴったりになるように、1アイテムにつき最大2回の売却を行う
 - 例) 設定が`"ゴブリンの爪": 30`で実際のアイテム数が85個の場合 
-    - `sell_roughly`が`true`なら、50個売却して35個になる
-    - `sell_roughly`が`false`なら、50個の売却と5個の売却を行い、ちょうど30個になる
+    - `sell_exactly`が`false`なら、50個売却して35個になる
+    - `sell_exactly`が`true`なら、50個の売却と5個の売却を行い、ちょうど30個になる
 - 環境によって待ち時間の調整が必要(指定は秒)
 
 ## [haken_iron.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/haken_iron.js)
@@ -92,7 +93,7 @@
     ```
 - 素材となる下位装備は、保護・装備されていないもののうち一番最初にあるものが選択される
 - 下位装備の自動生成は行わないので不足している場合は別途生成が必要
-- イベント装備には未対応
+- イベント装備の場合は`event_weapon`に`true`を指定する
 
 ## [enhance_weapon.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/enhance_weapon.js)
 装備を強化するブックマークレット
@@ -101,7 +102,6 @@
 - 素材が不足している場合は途中で停止する
 - 素材となる下位装備は、保護・装備されていないもののうち一番最初にあるものが選択される
 - 下位装備の自動生成は行わないので不足している場合は別途生成が必要
-- イベント装備には未対応
 
 ## [kakusei.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/kakusei.js)
 覚醒を行うブックマークレット
@@ -137,5 +137,3 @@
 
 ## [previous_page.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/previous_page.js)
 ページングされたダイアログで現在のページの一つ前のページを表示するブックマークレット
-
-
