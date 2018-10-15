@@ -2,7 +2,7 @@ javascript:
 (function() {
   'use strict';
 
-  const page_selected = game_frame().querySelector('#asyPager > ul > li > a.selected');
+  const page_selected = game_frame().querySelector('#asyPager > ul > li > a.selected, #asyCardBasePager > ul > li > a.selected');
   if (!page_selected) {
     console.log('no pager');
     return;
