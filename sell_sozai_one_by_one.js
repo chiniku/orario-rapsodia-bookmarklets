@@ -2,19 +2,16 @@ javascript:
 (function() {
   'use strict';
   const sleep_sec = 0.5;
-  const sell_roughly = true;
+  const sell_exactly = false;
+  const buffer_count = 10;
 
   const item_max_counts = {
-      "コボルトの皮": 50
-    , "ゴブリンの爪": 30
-    , "ゴブリンの牙": 30
-    , "ゴブリンの角": 50
-    , "ダンジョン・リザードの鱗": 50
-    , "ダンジョン・リザードの牙": 30
-    , "フロッグシューターの皮": 50
-    , "フロッグシューターの瞳": 50
-    , "ウォーシャドウの瞳鏡": 50
-    , "キラーアントの牙": 50
+      "コボルトの皮": 60
+    , "ゴブリンの角": 60
+    , "ダンジョン・リザードの鱗": 60
+    , "フロッグシューターの瞳": 60
+    , "ウォーシャドウの瞳鏡": 60
+    , "キラーアントの牙": 60
   };
 
   main();
@@ -62,13 +59,13 @@ javascript:
   }
 
   async function sell_item_exceed_max_count([id, max_count]){
-    const max_repeat_count = sell_roughly ? 1 : 2;
+    const max_repeat_count = sell_exactly ? 2 : 1;
     for (let i=0;i<max_repeat_count;i++) {
       const target_item = item(id);
       if (!target_item){ return; }
 
       const item_count = target_item.count;
-      if (item_count > max_count) {
+      if (item_count > max_count + buffer_count) {
         const max_sell_count = item_count - max_count;
         target_item.click();
         select_count_for_sell(max_sell_count);
