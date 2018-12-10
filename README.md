@@ -137,3 +137,15 @@
 
 ## [previous_page.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/previous_page.js)
 ページングされたダイアログで現在のページの一つ前のページを表示するブックマークレット
+
+## [goto_N_page.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/goto_N_page.js)
+プレゼントボックスの指定ページへ移動するブックマークレット
+
+## [pick_sozai_from_presentbox.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/pick_sozai_from_presentbox.js)
+プレゼントボックスから指定した素材のみを受け取るブックマークレット
+- `const prompt = true;`にしておくと素材名を入力するプロンプトと受け取り回数を入力するプロンプトを表示する
+- `const prompt = false;`の場合は`"素材": () => "(?<!防御の)石|玉|木|綿|舌|薬草|ネグルド"`の正規表現にマッチする素材を受け取る
+- プレゼントボックスを開いている場合はそのページから、開いてない場合は最後のページから、1ページ目に向かって進む
+- 1ページ目から古いページに向かって進みたい場合は`page_move_backward`を`false`に変更
+- ページめくり速度が遅いので使い勝手はあまり良くない
+
