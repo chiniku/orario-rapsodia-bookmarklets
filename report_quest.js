@@ -2,6 +2,7 @@ javascript:
 (function() {
   'use strict';
   const sleep_sec = 0.5;
+  const skip_event_quest = false;
 
   main();
 
@@ -45,8 +46,12 @@ javascript:
     const quest_category = game_frame().querySelector('#container > div.grid_td08 > ul > li div.ico_common01');
     if (quest_category) {
       const target_category = quest_category.parentNode.innerText;
+      if (skip_event_quest && target_category == "イベント") {
+        console.log("skip event quest");
+        return false;
+      }
       const current_category = game_frame().querySelector('#container > div.grid_td08 > ul > li > div.selected').innerText;
-      if (current_category !== target_category ) {
+      if (current_category !== target_category || current_category == "イベント") {
         const category_id = quest_category_id[target_category];
         const query_string = `?action=mission_index&guid=ON&div=${category_id}`;
         change_search_params(query_string);
@@ -65,7 +70,8 @@ javascript:
 
   function event_quest_selected(){
     const quest_category_panel = game_frame().querySelector('#container > div.grid_td08 > ul > li > div.selected > div.ico_common01');
-    const report_button = Array.from(game_frame().querySelectorAll('#container a.btn_common04')).filter(x=>x.innerText === "一括報告する")[0];
+    const report_button = Array.from(game_frame().querySelectorAll('#container a.btn_common04, #container form > input'))
+                               .filter(x=>x.innerText === "一括報告する" || x.value === "一括報告する")[0];
     return not_now_loading() && quest_category_panel && report_button;
   }
 
@@ -93,7 +99,8 @@ javascript:
   }
 
   async function report_quest(){
-    const selector = '#container > div.grid_td08 > div > div.sec_common03 > section > div > a.btn_common04:not([class*="disabled"])';
+    const selector = `#container > div.grid_td08 > div > div.sec_common03 > section > div > a.btn_common04:not([class*="disabled"]),
+                      #container > div.grid_td08 > div > div.sec_common03 > section > div > form > input[value="一括報告する"]`;
     for (let i=0;i<5;i++) {
       const report_button = game_frame().querySelector(selector);
       if (!report_button) {
