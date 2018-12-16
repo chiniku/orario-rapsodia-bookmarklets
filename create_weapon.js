@@ -5,10 +5,19 @@ javascript:
   const event_weapon = false;
   const weapon_type = "種類";
   const weapon_name = "名前";
+  const default_count = 1;
 
   main();
 
   async function main(){
+    const user_input_count = window.prompt("生成本数を入力して下さい", default_count);
+    if (user_input_count === null) { return };
+    const create_count  = parseInt(zenkaku_to_hankaku(user_input_count), 10);
+    if (! create_count) {
+      console.log("invalid number:", user_input_count);
+      return 
+    }
+    console.log("生成本数", create_count);
 
     if (!weapon_seisei_opened() || !finder(weapon_name)()){
       goto_weapon_seisei();
@@ -19,18 +28,22 @@ javascript:
       await wait(weapon_menu_opened(weapon_type));
     }
 
-    await select_weapon(weapon_name);
-    await wait(shop_modal_for_item_opened(weapon_name));
-    await sleep(sleep_sec);
+    for (let i=1;i<=create_count;i++){
+      await select_weapon(weapon_name);
+      await wait(shop_modal_for_item_opened(weapon_name));
+      await sleep(sleep_sec);
 
-    const result = await create_weapon();
-    if (result){
-      await wait(shop_result_opened);
-      await sleep(sleep_sec*3);
-      close_shop_modal();
-    }
-    else {
-      console.log("unable to create the weapon");
+      const result = await create_weapon();
+      if (result){
+        await wait(shop_result_opened);
+        await sleep(sleep_sec*3);
+        close_shop_modal();
+        await wait(shop_modal_closed);
+      }
+      else {
+        console.log("unable to create the weapon");
+        break;
+      }
     }
   }
 
@@ -181,6 +194,11 @@ javascript:
     close_button.click();
   }
 
+  function shop_modal_closed(){
+    const closed_shop_modal = game_frame().querySelector('#modal_commonShopModal.modal-is-closed');
+    return not_now_loading() && closed_shop_modal;
+  }
+
   async function wait(predicate) {
     const wait_max_time = 10;
     const loop_sleep_time = 0.3;
@@ -220,4 +238,11 @@ javascript:
   function sleep(sec) {
     return new Promise(resolve => setTimeout(resolve, sec * 1000));
   }
+
+  function zenkaku_to_hankaku(string){
+    return string.replace(/[０-９]/g, (char) => {
+      return String.fromCharCode(char.charCodeAt(0) - 0xFEE0);
+    });
+  }
+
 })();
