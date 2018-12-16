@@ -94,6 +94,7 @@
 - 素材となる下位装備は、保護・装備されていないもののうち一番最初にあるものが選択される
 - 下位装備の自動生成は行わないので不足している場合は別途生成が必要
 - イベント装備の場合は`event_weapon`に`true`を指定する
+- 生成本数を入力するプロンプトを追加
 
 ## [enhance_weapon.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/enhance_weapon.js)
 装備を強化するブックマークレット
