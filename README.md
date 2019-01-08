@@ -150,6 +150,9 @@
 - 1ページ目から古いページに向かって進みたい場合は`page_move_backward`を`false`に変更
 - ページめくり速度が遅いので使い勝手はあまり良くない
 
+## [pick_card_from_presentbox.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/pick_card_from_presentbox.js)
+プレゼントボックスからSRカードのみを受け取るブックマークレット
+
 ## [copy_card_detail.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/copy_card_detail.js)
 カード詳細画面からカード名、属性(色)、ステイタス、アクティブスキル、パッシブスキルをタブ区切りでクリップボードにコピーするブックマークレット
 
