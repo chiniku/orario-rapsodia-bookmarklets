@@ -153,3 +153,5 @@
 ## [copy_card_detail.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/copy_card_detail.js)
 カード詳細画面からカード名、属性(色)、ステイタス、アクティブスキル、パッシブスキルをタブ区切りでクリップボードにコピーするブックマークレット
 
+## [valis_gacha.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/valis_gacha.js)
+ヴァリスガチャを回すブックマークレット
