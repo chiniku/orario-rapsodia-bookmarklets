@@ -16,15 +16,21 @@ javascript:
     }
     console.log("ガチャ回数", gacha_count);
 
-    for (let i=1;i<=gacha_count;i++){
-      await goto_valis_gacha();
-      click_10shot();
-      await wait(confirm_modal_opened);
-      click_yes();
-      await wait(result_opened);
-      log_result(i);
-      skip_result();
-      await wait(not_now_loading);
+    const total_result = {};
+    try{
+      for (let i=1;i<=gacha_count;i++){
+        await goto_valis_gacha();
+        click_10shot();
+        await wait(confirm_modal_opened);
+        click_yes();
+        await wait(result_opened);
+        log_result(i, total_result);
+        skip_result();
+        await wait(not_now_loading);
+      }
+    }
+    finally {
+      log_total_result(total_result);
     }
   }
 
@@ -70,7 +76,7 @@ javascript:
     game_frame().querySelector('#outputGcaConfirm form > input[type="submit"]').click();
   }
 
-  function log_result(count){
+  function log_result(count, total){
     const rarity = {"1": "N", "2": "R", "3": "SR", "4": "SSR"};
     const gacha_result = game_window()[vesta()[0]][vesta()[1]]
       .map(x=>{
@@ -79,13 +85,19 @@ javascript:
       })
      .reduce((acc, curr)=>{
         acc[curr.name] = acc[curr.name] + 1 || 1;
+        total[curr.name] = total[curr.name] + 1 || 1;
         return acc;
       },{});
-    console.log("%d:\t%s", count, Object.entries(gacha_result).map(([k,v])=>`${k}:${v}`).sort().join(' '));
+    console.log("%d:\t%s", count, Object.entries(gacha_result).map(([k,v])=>`${k}:${v}`).sort().reverse().join(' '));
   }
 
   function skip_result(){
     game_window().location.reload();
+  }
+
+  function log_total_result(total){
+    console.log("--------------------結果--------------------");
+    Object.entries(total).map(([k,v])=>`${k}:${v}`).sort().reverse().forEach(x=>console.log(x));
   }
 
   function result_opened(){
