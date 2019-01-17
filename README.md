@@ -163,6 +163,6 @@
 - 途中で通信エラー等で停止することも多いのでそのつもりで使って下さい
 
 ## [deck_skills.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/deck_skills.js)
-編成の各スキル詳細を出力するブックマークレット
-- 編成画面を開いてから実行
-- JavaScriptコンソールに結果を出力
+編成のスキル詳細を出力するブックマークレット
+- 編成画面を開いてから実行して下さい
+- 結果はJavaScriptコンソールに出力
