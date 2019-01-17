@@ -158,6 +158,9 @@
 
 ## [valis_gacha.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/valis_gacha.js)
 ヴァリスガチャを回すブックマークレット
+- ガチャ結果はJavaScriptコンソールに出力
+- 入力する回数は10連ガチャの回数 (10と入力すれば10連を10回実行する)
+- 途中で通信エラー等で停止することも多いのでそのつもりで使って下さい
 
 ## [deck_skills.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/deck_skills.js)
 編成の各スキル詳細を出力するブックマークレット
