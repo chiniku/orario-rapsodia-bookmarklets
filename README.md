@@ -158,3 +158,8 @@
 
 ## [valis_gacha.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/valis_gacha.js)
 ヴァリスガチャを回すブックマークレット
+
+## [deck_skills.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/deck_skills.js)
+編成の各スキル詳細を出力するブックマークレット
+- 編成画面を開いてから実行
+- JavaScriptコンソールに結果を出力
