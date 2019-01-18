@@ -166,3 +166,8 @@
 編成のスキル詳細を出力するブックマークレット
 - 編成画面を開いてから実行して下さい
 - 結果はJavaScriptコンソールに出力
+
+## [enemy_skills.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/enemy_skills.js)
+敵のスキル詳細を出力するブックマークレット
+- 戦闘開始後に実行して下さい
+- 結果はJavaScriptコンソールに出力
