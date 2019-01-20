@@ -171,3 +171,8 @@
 敵のスキル詳細を出力するブックマークレット
 - 戦闘開始後に実行して下さい
 - 結果はJavaScriptコンソールに出力
+
+## [enemy_info.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/enemy_info.js)
+スカウター
+- 戦闘開始後に実行して下さい
+- 結果はJavaScriptコンソールに出力
