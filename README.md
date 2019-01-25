@@ -192,5 +192,5 @@
 
 ## [team_member_detail.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/team_member_detail.js)
 同盟メンバーの詳細情報をコンソールに出力するブックマークレット
-- 同盟のメンバーリストへの遷移し、各メンバーの詳細情報(名前、レベル、戦闘力、全戦闘力、名声値)をJavaScriptコンソールに出力
+- 同盟のメンバーリストへの遷移し、各メンバーの詳細情報をJavaScriptコンソールに出力
 
