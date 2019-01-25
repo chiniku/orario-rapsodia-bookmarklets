@@ -176,3 +176,12 @@
 スカウター
 - 戦闘開始後に実行して下さい
 - 結果はJavaScriptコンソールに出力
+
+## [topN_players.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/topN_players.js)
+同盟戦の個人ランキングをコンソールに出力するブックマークレット
+- 同盟戦画面への遷移し、個人ランキングの各ページにある情報をJavaScriptコンソールに出力
+- `nth_top`に100を指定すれば100位までの情報を出力
+    - 例) `const nth_top = 100;`
+- `const print_flag = true`にすると、ページ単位の都度出力とは別に最後に全ページの情報をまとめて出力する
+- `const quiet_flag = true`にすると、ページ単位の都度出力をしない
+- `generate_topN_players_bookmarklet.sh`は上記3オプションを設定してブックマークレットを出力するbashスクリプト
