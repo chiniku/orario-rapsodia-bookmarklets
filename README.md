@@ -185,3 +185,7 @@
 - `const print_flag = true`にすると、ページ単位の都度出力とは別に最後に全ページの情報をまとめて出力する
 - `const quiet_flag = true`にすると、ページ単位の都度出力をしない
 - `generate_topN_players_bookmarklet.sh`は上記3オプションを設定してブックマークレットを出力するbashスクリプト
+
+## [top_teams.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/top_teams.js)
+同盟戦の同盟ランキングをコンソールに出力するブックマークレット
+- 同盟戦画面への遷移し、同盟ランキングの各ページにある情報をJavaScriptコンソールに出力
