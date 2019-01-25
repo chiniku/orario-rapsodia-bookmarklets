@@ -189,3 +189,8 @@
 ## [top_teams.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/top_teams.js)
 同盟戦の同盟ランキングをコンソールに出力するブックマークレット
 - 同盟戦画面への遷移し、同盟ランキングの各ページにある情報をJavaScriptコンソールに出力
+
+## [team_member_detail.js](https://github.com/chiniku/orario-rapsodia-bookmarklets/blob/master/team_member_detail.js)
+同盟メンバーの詳細情報をコンソールに出力するブックマークレット
+- 同盟のメンバーリストへの遷移し、各メンバーの詳細情報(名前、レベル、戦闘力、全戦闘力、名声値)をJavaScriptコンソールに出力
+
